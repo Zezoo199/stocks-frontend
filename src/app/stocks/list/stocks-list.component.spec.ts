@@ -5,6 +5,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {BrowserModule} from '@angular/platform-browser';
 import {HttpClientModule} from '@angular/common/http';
 import {BackendClient} from '../client/BackendClient';
+import {Stock} from '../model/Stock';
 
 describe('StocksListComponent', () => {
   let component: StocksListComponent;
@@ -29,6 +30,7 @@ describe('StocksListComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-  function getStocks() {
+  function getStock() {
+    return new Stock(1, 'Payconiq', 'EUR 15', new Date());
   }
 });
